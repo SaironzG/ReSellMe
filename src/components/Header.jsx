@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './Header.scss';
 import { FaQuestionCircle, FaUserPlus, FaUser, FaSearch, FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../assets/imgs/navlogo.png';
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,13 +24,17 @@ const Header = () => {
 
   return (
     <header className={`header ${isDarkMode ? 'dark' : ''}`}>
-      <div className="logo">ResellMe</div>
+      <div className="first">
+    <div className="logo">
+            <img src={logo} alt="Company Logo" className="responsive-logo" />
+        </div>
       
       <nav className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <a href="#docs" onClick={toggleMobileMenu}>Docs</a>
         <a href="#blog" onClick={toggleMobileMenu}>Blog</a>
         <a href="#about" onClick={toggleMobileMenu}>About Us</a>
       </nav>
+      </div>
       
       <div className="header-icons">
         <a href="#support" className="icon-link"><FaQuestionCircle /> Support</a>

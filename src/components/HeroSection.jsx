@@ -1,13 +1,14 @@
 // src/HeroSection.js
 import React from 'react';
 import './HeroSection.scss';
+import Header from './Header';
 
 
 const HeroSection = () => {
   return (
     <div className="hero-section">
      
-
+     <Header/>
 
       {/* Hero Content */}
       <section className="hero-content">

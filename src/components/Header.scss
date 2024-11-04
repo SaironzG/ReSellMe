@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background: #003f8a;
+  background: #003e8a00;
   color: #ffffff;
   position: sticky;
   top: 0;
@@ -17,12 +17,41 @@
     color: #f5f5f5;
   }
 
+.first{ 
+  display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
   .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #ffffff;
-    cursor: pointer;
-  }
+    display: flex;
+    justify-content: center; /* Center the logo */
+    align-items: center; /* Center vertically */
+    max-width: 100%; /* Prevent overflow */
+    transition: 0.6s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.05); /* Slightly enlarge the logo on hover */
+}
+
+.responsive-logo {
+    width: 100%; /* Make the logo take full width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Set a maximum width */
+}
+
+/* Media Queries for Different Screen Sizes */
+@media (max-width: 768px) {
+    .responsive-logo {
+        max-width: 150px; /* Adjust size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-logo {
+        max-width: 100px; /* Adjust size for mobile */
+    }
+}
 
   .nav-links {
     display: flex;
