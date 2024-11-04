@@ -1,0 +1,98 @@
+// src/HeroSection.scss
+
+.hero-section {
+    color: #ffffff;
+    background: linear-gradient(135deg, #002f6c 0%, #003f8a 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  
+    
+    .hero-content {
+      text-align: center;
+      margin-top: 50px;
+      max-width: 800px;
+  
+      .hero-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        animation: fadeIn 1.5s ease;
+      }
+  
+      .hero-subtitle {
+        font-size: 1.1rem;
+        color: #cce7ff;
+        margin-bottom: 30px;
+        animation: fadeIn 1.8s ease;
+      }
+  
+      .hero-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+  
+        .btn {
+          padding: 10px 20px;
+          font-weight: 500;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+  
+          &.primary {
+            background: #ffffff;
+            color: #003f8a;
+            &:hover {
+              background: #cce7ff;
+            }
+          }
+  
+          &.secondary {
+            background: #0073e6;
+            color: #ffffff;
+            &:hover {
+              background: #005bb5;
+            }
+          }
+  
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+  
+  // Animations
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  // Responsive Styles
+  @media (max-width: 768px) {
+    .header .nav-links {
+      display: none;
+    }
+  
+    .header .header-icons {
+      gap: 10px;
+    }
+  
+    .hero-content .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-content .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
