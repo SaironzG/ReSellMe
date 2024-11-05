@@ -42,6 +42,7 @@ const Features = () => {
       <div className="feature-list">
         {features.map(feature => (
           <div key={feature.id} className="feature">
+
             <div className="icon">
               <img src={feature.image} alt={feature.title} /> {/* Render the image */}
             </div>

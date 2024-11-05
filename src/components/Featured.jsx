@@ -1,13 +1,26 @@
 import React, { useState } from 'react';
 import './Featured.scss';
+import techzim from "../assets/imgs/techzim.png";
+import techmac from "../assets/imgs/techmac.png";
+import econet from "../assets/imgs/econet.png";
+import netone from "../assets/imgs/netone.png";
+import cassava from "../assets/imgs/cassava.png";
+import eightfive from "../assets/imgs/eightfive.png";
+import chat from "../assets/imgs/263chat.png";
+import scopic from "../assets/imgs/scopic.png";
+
 
 const Featured = () => {
   const logos = [
-    { id: 1, name: 'TechZim', image: 'https://via.placeholder.com/150?text=TechZim' },
-    { id: 2, name: 'TechnoMag', image: 'https://via.placeholder.com/150?text=TechnoMag' },
-    { id: 3, name: 'Econet', image: 'https://via.placeholder.com/150?text=Econet' },
-    { id: 4, name: 'NetOne', image: 'https://via.placeholder.com/150?text=NetOne' },
-    { id: 5, name: 'ZOL', image: 'https://via.placeholder.com/150?text=ZOL' },
+    { id: 1, name: 'TechZim', image: techzim },
+    { id: 2, name: 'TechnoMag', image: techmac },
+    { id: 3, name: 'Econet', image: econet },
+    { id: 4, name: 'NetOne', image: netone},
+    { id: 5, name: 'cassava', image: cassava },
+    { id: 6, name: 'scopic', image: scopic },
+    { id: 7, name: 'eightfive', image: eightfive },
+    { id: 8, name: '263chat', image: chat},
+ 
   ];
 
   const [startIndex, setStartIndex] = useState(0);

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './FAQ.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const FAQ = () => {
   const questions = [
@@ -48,7 +50,9 @@ const FAQ = () => {
           <div key={item.id} className="question">
             <div className="question-title" onClick={() => toggleAccordion(index)}>
               {item.question}
-              <span>{openIndex === index ? '▲' : '▼'}</span>
+              <span>
+  <FontAwesomeIcon icon={openIndex === index ? faChevronUp : faChevronDown} />
+</span>
             </div>
             {openIndex === index && <div className="question-answer">{item.answer}</div>}
           </div>

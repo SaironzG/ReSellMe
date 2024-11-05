@@ -12,12 +12,33 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Cerapro Bolder';
+  src: url('./assets/fonts/Fontspring-DEMO-cerapro-black.otf') format('opentype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
 p {
   font-family: 'Avenir LT Std', sans-serif;
   font-weight: 300;
 }
 
-h1, h2, h3 {
+ h2, h3 {
   font-family: 'Cerapro Bold', sans-serif;
   font-weight: bold;
 }
+
+h1{
+  font-family: 'Cerapro Bolder', sans-serif;
+  font-weight: bolder;
+}
+
+/* src/index.css */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* You can add other global dark mode styles here */

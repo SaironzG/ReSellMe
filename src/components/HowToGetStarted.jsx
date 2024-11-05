@@ -10,19 +10,19 @@ const HowToGetStarted = () => {
       id: 1,
       title: 'Register',
       description: 'To get started with buying domains for clients, all you need to do is create an account on our platform using your email, phone number & preferred payment method.',
-      image: register, // Directly assign the image
+      image: register,
     },
     {
       id: 2,
       title: 'Find Client',
       description: 'Find a client who can be a business owner or a freelancer who wants a website but does not have a domain. You take lead to buy the desired domain via ReSellMe for the client upfront.',
-      image: client, // Directly assign the image
+      image: client,
     },
     {
       id: 3,
       title: 'Get Money!',
       description: 'You only pay when you get a client to sell the service to. Your client pays for the service and you keep the profit. Our payment methods include Paypal, Visa, MasterCard, Bitcoin & Mukuru.',
-      image: money, // Directly assign the image
+      image: money,
     },
   ];
 
@@ -32,8 +32,9 @@ const HowToGetStarted = () => {
       <div className="steps">
         {steps.map(step => (
           <div key={step.id} className="step">
+            <div className="number-circle">{step.id}</div>
             <div className="icon">
-              <img src={step.image} alt={step.title} /> {/* Display the image */}
+              <img src={step.image} alt={step.title} />
             </div>
             <h3>{step.title}</h3>
             <p>{step.description}</p>
@@ -43,6 +44,6 @@ const HowToGetStarted = () => {
       <button className="get-started-btn">Get Started</button>
     </div>
   );
-}
+};
 
 export default HowToGetStarted;

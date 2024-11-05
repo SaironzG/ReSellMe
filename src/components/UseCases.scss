@@ -1,51 +1,75 @@
 .use-cases {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
+  text-align: center;
+  padding: 40px;
+
+  h2 {
+    color: #002a5c;
+    margin-bottom: 20px;
+  }
+
+  .carousel {
+    position: relative;
+    display: flex;
   
-    h2 {
-      color: #002a5c;
-      margin-bottom: 20px;
-    }
-  
+    overflow-x: hidden;
+    width: 100%;
+
     .cases {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      transition: transform 0.5s ease;
     }
-  
+
     .case {
+      min-width: 300px;
+      max-width: 300px;
+      margin: 0 10px;
       background-color: #fff;
       padding: 20px;
       border-radius: 8px;
-      width: 300px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s, box-shadow 0.3s;
       text-align: left;
-  
+      transform: scale(0.8);
+
+      &.active {
+        transform: scale(1);
+      }
+
       &:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
-  
-      .icon {
+
+      .pic {
         font-size: 2rem;
         margin-bottom: 10px;
+        background-color: #002a5c;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        img {
+          width: 50%;
+          height: 50%;
+        }
       }
-  
+
       h3 {
         margin-bottom: 10px;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         color: #002a5c;
+        font-weight: bold;
       }
-  
+
       p {
         font-size: 0.9rem;
         line-height: 1.4;
         color: #555;
       }
-  
+
       .read-more-btn {
         margin-top: 10px;
         padding: 10px 20px;
@@ -56,22 +80,35 @@
         cursor: pointer;
         font-size: 0.9rem;
         transition: background-color 0.3s;
-  
+
         &:hover {
           background-color: #00509e;
         }
       }
     }
-  }
-  
-  @media (max-width: 768px) {
-    .case {
-      width: 100%;
+
+    .carousel-control {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #002a5c;
+      cursor: pointer;
+      padding: 0 10px;
+      position: absolute;
+    }
+
+    .left {
+      left: 10px;
+    }
+
+    .right {
+      right: 10px;
     }
   }
+}
 
-  .pic{
-    background-color: #002a5c;
-    padding: 3rem;
-    border-radius: 10%;
+@media (max-width: 768px) {
+  .case {
+    width: 100%;
   }
+}

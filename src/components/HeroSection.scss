@@ -17,8 +17,9 @@
       align-self: center;
       justify-self: center;
       .hero-title {
+       
         font-size: 2.5rem;
-        font-weight: bold;
+        font-weight: bolder;
         margin-bottom: 10px;
         animation: fadeIn 1.5s ease;
       }
@@ -28,6 +29,7 @@
         color: #cce7ff;
         margin-bottom: 30px;
         animation: fadeIn 1.8s ease;
+       
       }
   
       .hero-buttons {
@@ -52,10 +54,10 @@
           }
   
           &.secondary {
-            background: #0073e6;
+            background: #018181;
             color: #ffffff;
             &:hover {
-              background: #005bb5;
+              background: #007575;
             }
           }
   
