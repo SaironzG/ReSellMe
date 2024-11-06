@@ -11,6 +11,7 @@ import FAQ from './components/FAQ';
 import Featured from './components/Featured';
 import PromoSection from './components/PromoSection';
 import Footer from './components/Footer';
+import OurPartners from './components/OurPartners';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
          <FAQ/>
          <Featured/>
          <PromoSection/>
+         <OurPartners/>
          <Footer/>
     </>
   )

@@ -1,8 +1,8 @@
 .use-cases {
-  text-align: center;
+
   padding: 40px;
 
-  h2 {
+  h1 {
     color: #002a5c;
     margin-bottom: 20px;
   }
@@ -25,7 +25,7 @@
       margin: 0 10px;
       background-color: #fff;
       padding: 20px;
-      border-radius: 8px;
+   
       transition: transform 0.3s, box-shadow 0.3s;
       text-align: left;
       transform: scale(0.8);
@@ -73,6 +73,7 @@
       .read-more-btn {
         margin-top: 10px;
         padding: 10px 20px;
+        width: 100%;
         background-color: #002a5c;
         color: #fff;
         border: none;
@@ -89,20 +90,26 @@
 
     .carousel-control {
       background: none;
-      border: none;
-      font-size: 2rem;
-      color: #002a5c;
+      border: 2px solid #003F74;
+      font-size: 1rem;
+      color: #003F74;
       cursor: pointer;
-      padding: 0 10px;
+      // padding: 10px;
       position: absolute;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
     }
 
     .left {
-      left: 10px;
+      right: 80px;
+      bottom: 10px;
     }
 
     .right {
-      right: 10px;
+      right: 30px;
+      bottom: 10px;
     }
   }
 }

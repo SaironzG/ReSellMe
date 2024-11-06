@@ -46,22 +46,22 @@
 
   .testimonial-cards {
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
     flex: 2;
   }
 
   .testimonial-card {
-    min-width: 100%;
-    display: flex;
+    min-width: 10%;
     align-items: center;
     background-color: #004080;
     border-radius: 8px;
-    overflow: hidden;
+    // overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease;
+    margin-left: 10px;
 
     img {
-      width: 150px;
+      width: 80%;
       height: 150px;
       object-fit: cover;
       margin: 20px;
@@ -74,7 +74,7 @@
         margin: 0 0 10px 0;
         font-style: italic;
         quotes: "“" "”" "‘" "’";
-
+        color: #fff;
         &:before {
           content: open-quote;
         }
@@ -86,6 +86,7 @@
 
       p {
         margin: 0;
+        color: #fff;
       }
     }
   }

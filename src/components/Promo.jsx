@@ -16,7 +16,7 @@ const Promo = () => {
         <p>
           Buying domains through the platform is <strong>SUPER CHEAP</strong>.
         </p>
-        <button className="btn">Read More</button>
+        <button className="button">Read More</button>
       </div>
     </div>
   );

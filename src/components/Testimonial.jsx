@@ -58,8 +58,9 @@ const Testimonials = () => {
           >
             <img src={testimonial.image} alt={testimonial.name} />
             <div className="testimonial-content">
+            <p><strong>{testimonial.name}</strong><br />{testimonial.company}</p>
               <blockquote>{testimonial.feedback}</blockquote>
-              <p><strong>{testimonial.name}</strong><br />{testimonial.company}</p>
+
             </div>
           </div>
         ))}

@@ -45,9 +45,9 @@ const UseCases = () => {
 
   return (
     <div className="use-cases">
-      <h2>Resellme's Use Cases</h2>
+      <h1>Resellme's Use Cases</h1>
       <div className="carousel">
-        <button onClick={prevSlide} className="carousel-control left">❮</button>
+
         <div className="cases" style={{ transform: `translateX(-${currentIndex * 320}px)` }}>
           {useCases.map((useCase, index) => (
             <div key={useCase.id} className={`case ${index === currentIndex ? 'active' : ''}`}>
@@ -60,6 +60,7 @@ const UseCases = () => {
             </div>
           ))}
         </div>
+        <button onClick={prevSlide} className="carousel-control left">❮</button>
         <button onClick={nextSlide} className="carousel-control right">❯</button>
 
       </div>

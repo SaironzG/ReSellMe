@@ -35,18 +35,19 @@ const Featured = () => {
 
   return (
     <div className="featured">
-      <h2>We've Been Featured In</h2>
+      <h2 className='hi'>We've Been Featured In</h2>
       <div className="carousel">
-        <button onClick={handlePrev} className="arrow-btn">←</button>
-        <div className="carousel-logos">
+              <div className="carousel-logos">
           {logos.slice(startIndex, startIndex + 3).map(logo => (
             <div key={logo.id} className="logo">
               <img src={logo.image} alt={logo.name} />
             </div>
           ))}
         </div>
-        <button onClick={handleNext} className="arrow-btn">→</button>
+
       </div>
+      <button onClick={handlePrev} className="arrow-btn left">←</button>
+      <button onClick={handleNext} className="arrow-btn right">→</button>
     </div>
   );
 }
