@@ -1,22 +1,25 @@
 .features {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   padding: 40px;
   background-color: #ffffff;
-  text-align: left;
+  text-align: center;
 
   .intro {
-
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    max-width: 800px;
 
     h2 {
       color: #002a5c;
+      font-size: 2rem;
       margin-bottom: 10px;
     }
 
     p {
       color: #002a5c;
       line-height: 1.6;
+      font-size: 1rem;
     }
   }
 
@@ -24,7 +27,9 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    flex: 1 1 100%;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
   }
 
   .feature {
@@ -32,11 +37,13 @@
     color: #002a5c;
     padding: 20px;
     border-radius: 8px;
-    width: 250px;
-   
+    width: 100%;
+    max-width: 280px;
+    margin: 10px;
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
     &:hover {
       transform: translateY(-5px);
@@ -60,7 +67,6 @@
     }
 
     .icon {
-      font-size: 2rem;
       margin-bottom: 10px;
       background-color: #002a5c;
       border-radius: 50%;
@@ -79,7 +85,6 @@
 
     h3 {
       margin-top: 10px;
-      margin-bottom: 10px;
       font-size: 1.2rem;
     }
 
@@ -106,9 +111,61 @@
   }
 }
 
+@media (max-width: 992px) {
+  .features {
+    padding: 30px;
+
+    .intro h2 {
+      font-size: 1.8rem;
+    }
+
+    .intro p {
+      font-size: 0.95rem;
+    }
+
+    .feature {
+      max-width: 240px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
-  .feature-list {
-    flex-direction: column;
-    align-items: center;
+  .features {
+    padding: 20px;
+
+    .intro h2 {
+      font-size: 1.6rem;
+    }
+
+    .intro p {
+      font-size: 0.9rem;
+    }
+
+    .feature {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .features {
+    padding: 15px;
+
+    .intro h2 {
+      font-size: 1.5rem;
+    }
+
+    .intro p {
+      font-size: 0.85rem;
+    }
+
+    .feature {
+      padding: 15px;
+    }
+
+    .get-started-btn {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
   }
 }

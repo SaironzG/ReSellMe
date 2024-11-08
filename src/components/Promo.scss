@@ -1,62 +1,103 @@
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    background: #fff;
-    margin: 20px;
- padding: 100px;
+.promo-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 
+  &:hover {
+    transform: scale(1.02);
   }
-  
-  .image {
-    flex: 1;
-    min-width: 300px;
 
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s;
-    
-    &:hover {
-      transform: scale(1.05);
-    }
+  @media (max-width: 992px) {
+    padding: 40px;
   }
-  
-  .content {
-    flex: 1;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  @media (max-width: 576px) {
     padding: 20px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
   }
-  
+}
+
+.promo-image {
+  flex: 1;
+  min-width: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.promo-content {
+  flex: 1;
+  padding: 20px;
+
   h2 {
     color: #002a5c;
+    font-size: 2rem;
     margin-bottom: 10px;
-    font-weight:bolder;
+    font-weight: bold;
+
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+    }
   }
-  
+
   p {
     color: #002a5c;
     line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 1rem;
+
+    @media (max-width: 576px) {
+      font-size: 0.9rem;
+    }
   }
-  
-  .button {
+
+  .promo-button {
     margin-top: 20px;
-    padding: 10px 30px;
+    padding: 12px 30px;
     background-color: #002a5c;
     color: #fff;
     border: none;
-font-weight: bolder;
+    border-radius: 4px;
+    font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
     &:hover {
       background-color: #00509e;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 576px) {
+      padding: 10px 20px;
+      font-size: 0.9rem;
     }
   }
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  }
+}

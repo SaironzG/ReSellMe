@@ -4,11 +4,11 @@ import girl from '../assets/imgs/girl.png'; // Ensure you have the correct path 
 
 const Promo = () => {
   return (
-    <div className="container">
-      <div className="image">
+    <div className="promo-container">
+      <div className="promo-image">
         <img src={girl} alt="Promotional" />
       </div>
-      <div className="content">
+      <div className="promo-content">
         <h2>Wait, What?</h2>
         <p>
           Resellme allows you to purchase domains through our platform without paying money upfront. All you need to do is have a client who will pay for the domain, and you get to keep the profit deducted from the domain purchase price!
@@ -16,7 +16,7 @@ const Promo = () => {
         <p>
           Buying domains through the platform is <strong>SUPER CHEAP</strong>.
         </p>
-        <button className="button">Read More</button>
+        <button className="promo-button">Read More</button>
       </div>
     </div>
   );
