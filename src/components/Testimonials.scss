@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px;
+  padding: 50px;
   background-color: #002a5c;
   color: #fff;
   height: 100vh;
@@ -11,19 +11,21 @@
     flex: 1;
     max-width: 400px;
     margin-right: 20px;
+
     h2 {
       margin-bottom: 10px;
       color: #fff;
-      font-size: 1.8rem;
     }
+
     p {
       margin-bottom: 20px;
       color: #fff;
-      font-size: 1rem;
     }
+
     .navigation {
       display: flex;
       gap: 10px;
+
       button {
         background: none;
         border: 2px solid #fff;
@@ -33,6 +35,7 @@
         height: 40px;
         cursor: pointer;
         transition: background-color 0.3s;
+
         &:hover {
           background-color: #fff;
           color: #002a5c;
@@ -45,102 +48,112 @@
     display: flex;
     overflow-x: hidden;
     flex: 2;
-    scroll-behavior: smooth;
   }
 
   .testimonial-card {
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
+    min-width: 10%;
     align-items: center;
     background-color: #004080;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease;
-    margin: 0 10px;
-    text-align: center;
+    margin-left: 10px;
 
     img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-top: 20px;
+      width: 80%;
+      height: 150px;
+      object-fit: cover;
+      margin: 20px;
     }
 
     .testimonial-content {
       padding: 20px;
+
       blockquote {
+        margin: 0 0 10px 0;
         font-style: italic;
         quotes: "“" "”" "‘" "’";
         color: #fff;
-        &:before { content: open-quote; }
-        &:after { content: close-quote; }
+
+        &:before {
+          content: open-quote;
+        }
+
+        &:after {
+          content: close-quote;
+        }
       }
+
       p {
         margin: 0;
         color: #fff;
-        font-size: 0.9rem;
       }
     }
   }
 }
 
-// Media Query for tablet devices
+// Responsive Styles for Tablet and Mobile
+@media (max-width: 1024px) {
+  .testimonials {
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .intro {
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    width: 90%;
+    margin: 10px 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+
+    .testimonial-content {
+      padding: 15px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .testimonials {
-    flex-direction: column;
     padding: 20px;
-    height: auto;
-    .intro {
-      margin-bottom: 20px;
-      text-align: center;
-      max-width: 100%;
-      h2 {
-        font-size: 1.6rem;
-      }
-      p {
-        font-size: 0.95rem;
-      }
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
     }
-    .testimonial-cards {
-      flex-direction: column;
-    }
-    .navigation {
-      justify-content: center;
-      button {
-        width: 30px;
-        height: 30px;
-        font-size: 1rem;
-      }
+
+    .testimonial-content {
+      padding: 15px;
     }
   }
-}
 
-// Media Query for mobile devices
-@media (max-width: 480px) {
-  .testimonials {
-    .intro {
-      h2 {
-        font-size: 1.4rem;
-      }
-      p {
-        font-size: 0.85rem;
-      }
-    }
-    .testimonial-card {
-      img {
-        width: 60px;
-        height: 60px;
-      }
-      .testimonial-content {
-        padding: 15px;
-        blockquote {
-          font-size: 0.85rem;
-        }
-        p {
-          font-size: 0.8rem;
-        }
-      }
-    }
+  .navigation button {
+    width: 30px;
+    height: 30px;
   }
 }

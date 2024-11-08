@@ -1,25 +1,21 @@
 .features {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
   padding: 40px;
   background-color: #ffffff;
-  text-align: center;
+  text-align: left;
 
   .intro {
-    margin-bottom: 30px;
-    max-width: 800px;
+    margin-bottom: 20px;
 
     h2 {
       color: #002a5c;
-      font-size: 2rem;
       margin-bottom: 10px;
     }
 
     p {
       color: #002a5c;
       line-height: 1.6;
-      font-size: 1rem;
     }
   }
 
@@ -27,9 +23,7 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 1200px;
+    flex: 1 1 100%;
   }
 
   .feature {
@@ -37,13 +31,10 @@
     color: #002a5c;
     padding: 20px;
     border-radius: 8px;
-    width: 100%;
-    max-width: 280px;
-    margin: 10px;
+    width: 250px;
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: left;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
     &:hover {
       transform: translateY(-5px);
@@ -67,6 +58,7 @@
     }
 
     .icon {
+      font-size: 2rem;
       margin-bottom: 10px;
       background-color: #002a5c;
       border-radius: 50%;
@@ -85,6 +77,7 @@
 
     h3 {
       margin-top: 10px;
+      margin-bottom: 10px;
       font-size: 1.2rem;
     }
 
@@ -111,61 +104,71 @@
   }
 }
 
-@media (max-width: 992px) {
+// Responsive Styles for Tablet and Mobile
+@media (max-width: 1024px) {
   .features {
     padding: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .intro h2 {
-      font-size: 1.8rem;
+  .feature-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .feature {
+    width: 200px;
+    padding: 15px;
+
+    h3 {
+      font-size: 1.1rem;
     }
 
-    .intro p {
-      font-size: 0.95rem;
+    p {
+      font-size: 0.85rem;
     }
+  }
 
-    .feature {
-      max-width: 240px;
-    }
+  .get-started-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 768px) {
   .features {
     padding: 20px;
-
-    .intro h2 {
-      font-size: 1.6rem;
-    }
-
-    .intro p {
-      font-size: 0.9rem;
-    }
-
-    .feature {
-      max-width: 100%;
-    }
+    text-align: center;
   }
-}
 
-@media (max-width: 576px) {
-  .features {
+  .feature-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .feature {
+    width: 100%;
     padding: 15px;
+    margin: 10px 0;
 
-    .intro h2 {
-      font-size: 1.5rem;
+    .number-circle {
+      top: -10px;
+      left: 10px;
     }
 
-    .intro p {
+    h3 {
+      font-size: 1rem;
+    }
+
+    p {
       font-size: 0.85rem;
     }
+  }
 
-    .feature {
-      padding: 15px;
-    }
-
-    .get-started-btn {
-      padding: 8px 16px;
-      font-size: 0.9rem;
-    }
+  .get-started-btn {
+    font-size: 0.85rem;
+    padding: 8px 16px;
   }
 }

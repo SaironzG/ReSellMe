@@ -8,7 +8,6 @@ import { useDarkMode } from '../DarkModeContext';
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isSearchOpen, setSearchOpen] = useState(false);
-
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const toggleMobileMenu = () => {
@@ -26,15 +25,15 @@ const Header = () => {
           <img src={logo} alt="Company Logo" className="responsive-logo" />
         </div>
 
-        <nav className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <a href="#docs" onClick={toggleMobileMenu}>Docs</a>
-          <a href="#blog" onClick={toggleMobileMenu}>Blog</a>
-          <a href="#about" onClick={toggleMobileMenu}>About Us</a>
-        </nav>
+        <div className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+          <a href="#docs">Docs</a>
+          <a href="#blog" >Blog</a>
+          <a href="#about" >About Us</a>
+        </div>
       </div>
 
-      <div className="header-icons">
-        <a href="#support" className="icon-link"><FaQuestionCircle /> Support</a>
+      <div className={`header-icons ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+        <a href="#support"  className="icon-link"><FaQuestionCircle /> Support</a>
         <a href="#portal" className="icon-link"><FaUser /> Portal</a>
         <a href="#register" className="icon-link"><FaUserPlus /> Register</a>
         
@@ -49,10 +48,11 @@ const Header = () => {
           {isDarkMode ? <FaSun /> : <FaMoon />}
         </button>
         
-        <button className="menu-toggle" onClick={toggleMobileMenu}>
+     
+      </div>
+      <button className="menu-toggle" onClick={toggleMobileMenu}>
           {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
-      </div>
     </header>
   );
 };

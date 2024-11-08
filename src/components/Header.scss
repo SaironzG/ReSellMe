@@ -22,15 +22,14 @@
   }
 
   .logo {
-    display: flex;
-    align-items: center;
+  
     max-width: 100%;
     transition: 0.6s ease-in-out;
   }
 
   .responsive-logo {
     width: 100%;
-    max-width: 200px;
+   
   }
 
   .nav-links {
@@ -52,15 +51,14 @@
     &.mobile-open {
       display: flex;
       flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
       width: 100%;
       background: #003e8a;
       padding: 15px 0;
       gap: 10px;
       animation: slideDown 0.3s ease-in-out;
-
+      position: fixed;
+      top: 10px;
+      left: 0;
       a {
         padding: 10px 0;
         font-size: 1.2rem;
@@ -73,6 +71,26 @@
     display: flex;
     align-items: center;
     gap: 15px;
+
+    &.mobile-open {
+      display: flex;
+      flex-direction: column;
+   
+      width: 100%;
+      background: #003e8a;
+      padding: 15px 0;
+      padding-top: 0;
+      gap: 10px;
+      animation: slideDown 0.3s ease-in-out;
+      position: fixed;
+      top: 200px;
+      left: 0;
+      a {
+        padding: 10px 0;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+    }
 
     .icon-link {
       display: flex;
@@ -140,37 +158,47 @@
       }
     }
 
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: inherit;
-      cursor: pointer;
-      transition: color 0.3s;
-
-      &:hover {
-        color: #cce7ff;
-      }
+   
+  }
+  .menu-toggle {
+    display: none;
+    background: #003e8a7e;
+    border: none;
+    font-size: 1.5rem;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.3s;
+position: fixed;
+right: 25px;
+border-radius: 10px;
+// height: 28px;
+// width: 34px;
+padding:6px 10px;
+    &:hover {
+      color: #9cd1ff;
     }
   }
 }
 
 // Responsive Styles
 @media (max-width: 768px) {
-  .nav-links {
+ .first .nav-links {
     display: none; /* Hide desktop nav-links */
   }
+
+  .header .menu-toggle {
+    display: block;
+    transition: 0.6s ease-in-out;
+  
+}
 
   .header-icons {
     .search-container {
       display: none; /* Hide search on mobile */
     }
-
-    .menu-toggle {
-      display: block; /* Show hamburger icon */
-    }
   }
+
+  .header .header-icons {display: none;}
 }
 
 @keyframes slideDown {
