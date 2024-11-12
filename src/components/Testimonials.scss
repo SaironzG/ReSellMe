@@ -49,7 +49,9 @@
     overflow-x: hidden;
     flex: 2;
   }
-
+  .testimonials .testimonial-cards{
+    overflow-x: hidden;
+  }
   .testimonial-card {
     min-width: 46%;
     align-items: center;
@@ -161,7 +163,9 @@
       padding: 15px;
     }
   }
-
+  .testimonials .testimonial-cards{
+    overflow-x: hidden;
+  }
   .navigation button {
     width: 30px;
     height: 30px;
