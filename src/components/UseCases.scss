@@ -115,7 +115,16 @@
 }
 
 @media (max-width: 768px) {
+  .use-cases{
+    text-align: center;
+  }
   .case {
     width: 100%;
+  }
+  .use-cases .carousel .case {
+    text-align: center;
+  }
+  .use-cases .carousel .case .pic {
+    justify-self: center;
   }
 }

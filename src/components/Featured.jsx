@@ -35,7 +35,7 @@ const Featured = () => {
 
   return (
     <div className="featured">
-      <h2 className='hi'>We've Been Featured In</h2>
+      <h2>We've Been Featured In</h2>
       <div className="carousel">
               <div className="carousel-logos">
           {logos.slice(startIndex, startIndex + 3).map(logo => (

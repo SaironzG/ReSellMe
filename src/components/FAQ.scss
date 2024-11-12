@@ -1,7 +1,7 @@
 .faq {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    // align-items: flex-start;
     padding: 20px;
 
     color: #002a5c;
@@ -58,13 +58,25 @@
       }
     }
   }
-  
+  // Responsive Styles for Tablet and Mobile
+@media (max-width: 1024px) {
+  .faq {
+    flex-direction: column;
+text-align: center;
+justify-content: center;
+align-items: center;}
+}
+
+
   @media (max-width: 768px) {
     .faq {
       flex-direction: column;
-  
+  text-align: center;
+  justify-content: center;
+  align-items: center;
       .intro {
         margin-bottom: 20px;
+       
       }
   
       .questions {

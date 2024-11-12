@@ -146,13 +146,14 @@
   .feature-list {
     flex-direction: column;
     gap: 10px;
+    text-align: center;
   }
 
   .feature {
     width: 100%;
     padding: 15px;
     margin: 10px 0;
-
+    text-align: center;
     .number-circle {
       top: -10px;
       left: 10px;
@@ -171,4 +172,11 @@
     font-size: 0.85rem;
     padding: 8px 16px;
   }
+
+  .features .feature{    
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+  }
+  .features .feature .icon {justify-self: center;}
 }
