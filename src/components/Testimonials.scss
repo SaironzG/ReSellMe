@@ -5,7 +5,8 @@
   padding: 50px;
   background-color: #002a5c;
   color: #fff;
-  height: 100vh;
+  // height: 100vh;
+  overflow-x: hidden;
 
   .intro {
     flex: 1;
