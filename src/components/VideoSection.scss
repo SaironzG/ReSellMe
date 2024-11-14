@@ -1,122 +1,171 @@
-// src/VideoSection.scss
-
 .video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  min-height: 100vh;
+
+  .video-container {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    background: white;
-    min-height: 100vh;
-  
-  
-    .video-container {
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: -15rem;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      .video-thumbnail {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.6);
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.8);
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+
+    .modal-content {
       position: relative;
       width: 90%;
       max-width: 800px;
       aspect-ratio: 16 / 9;
-      background: #fff;
+      background: #000;
       border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      transition: transform 0.3s;
-      margin-top: -30rem;
-  
-      &:hover {
-        transform: scale(1.02);
-      }
-  
-      .video-frame {
-        position: relative;
+
+      iframe {
         width: 100%;
         height: 100%;
-  
-        .video-thumbnail {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-  
-        .play-button {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          background: rgba(0, 0, 0, 0.6);
-          border: none;
-          padding: 15px;
-          border-radius: 50%;
-          color: #fff;
-          font-size: 1.5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          transition: background 0.3s, transform 0.3s;
-  
-          &:hover {
-            background: rgba(0, 0, 0, 0.8);
-            transform: scale(1.1);
-          }
-        }
-      }
-    }
-  
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      animation: fadeIn 0.3s ease;
-  
-      .modal-content {
-        position: relative;
-        width: 90%;
-        max-width: 800px;
-        aspect-ratio: 16 / 9;
-        background: #000;
-        border-radius: 12px;
-        overflow: hidden;
-  
-        iframe {
-          width: 100%;
-          height: 100%;
-          border: none;
-        }
+        border: none;
       }
     }
   }
-  
-  // Animations
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Large screens (1200px and above)
+@media (min-width: 1200px) {
+  .video-section .video-container {
+    max-width: 1000px;
+    margin-top: -20rem;
+  }
+
+  .modal-overlay .modal-content {
+    max-width: 1000px;
+  }
+}
+
+// Medium to large screens (768px to 1199px)
+@media (max-width: 1199px) and (min-width: 768px) {
+  .video-section {
+    padding: 10px;
+
+    .video-container {
+      max-width: 800px;
+      margin-top: -10rem;
     }
-    to {
-      opacity: 1;
+
+    .modal-overlay .modal-content {
+      max-width: 800px;
     }
   }
-  
-  @media (max-width: 768px) {
-    .video-section {
-      padding: 10px;
-  
-      .video-container {
-        max-width: 100%;
-      }
-  
-      .modal-content {
-        max-width: 100%;
-      }
+}
+
+// Tablets and small screens (481px to 767px)
+@media (max-width: 767px) and (min-width: 481px) {
+  .video-section {
+    padding: 10px;
+
+    .video-container {
+      max-width: 600px;
+      margin-top: -5rem;
+    }
+
+    .modal-overlay .modal-content {
+      max-width: 600px;
     }
   }
-  
+}
+
+// Small mobile devices (480px and below)
+@media (max-width: 480px) {
+  .video-section {
+    padding: 5px;
+
+    .video-container {
+      width: 95%;
+      max-width: 400px;
+      margin-top: -3rem;
+    }
+
+    .modal-overlay .modal-content {
+      width: 95%;
+      max-width: 400px;
+    }
+
+    .video-frame .play-button {
+      padding: 12px;
+      font-size: 1.2rem;
+    }
+  }
+}

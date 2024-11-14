@@ -1,23 +1,20 @@
-// src/HeroSection.scss
-
 .hero-section {
     color: #ffffff;
     background: url(../assets/imgs/officilbg.png);
+    background-size: cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-// gap: 20px;
     padding: 0 20px;
     overflow-x: hidden;
-    
+  
     .hero-content {
       text-align: center;
       margin-top: 50px;
       max-width: 800px;
       align-self: center;
-      justify-self: center;
+  
       .hero-title {
-       
         font-size: 2.5rem;
         font-weight: bolder;
         margin-bottom: 10px;
@@ -29,20 +26,17 @@
         color: #fff;
         margin-bottom: 30px;
         animation: fadeIn 1.8s ease;
-       
       }
   
       .hero-buttons {
         display: flex;
         gap: 20px;
-     
         justify-content: center;
   
         .btn {
           padding: 10px 20px;
           font-weight: 500;
           border: none;
-       
           cursor: pointer;
           transition: transform 0.3s ease;
   
@@ -50,6 +44,7 @@
             background: #ffffff;
             color: #013D7B;
             font-weight: bolder;
+  
             &:hover {
               background: #cce7ff;
             }
@@ -58,6 +53,7 @@
           &.secondary {
             background: #018181;
             color: #ffffff;
+  
             &:hover {
               background: #007575;
             }
@@ -77,17 +73,162 @@
     100% { opacity: 1; transform: translateY(0); }
   }
 
-  // Mobile styles
-@media (max-width: 768px) {
-  .hero-buttons {
-      flex-direction: column; // Change to column for mobile
-      align-items: center; // Center align buttons
-      gap: 10px; // Adjust gap for mobile
+    // Styles for large screens
+  @media (min-width: 1200px) {
+    .hero-section {
+      padding: 0 60px;
+      min-height: 100vh;
+  
+      .hero-content {
+        margin-top: 70px;
+        max-width: 1000px;
+  
+        .hero-title {
+          font-size: 3.5rem;
+        }}}}
+  
+  @media (max-width: 1999px) {
+    .hero-section {
+        padding: 0 60px;
+        min-height: 100vh;
+        .hero-content {
+            margin-top: 4rem;
+        }
+    }
   }
 
-  .btn {
-      width: 100%; // Make buttons full width
-      padding: 15px; // Increase padding for better touch targets
-      font-size: 16px; // Increase font size for readability
+  // Mobile styles
+  @media (max-width: 768px) {
+    .hero-section {
+      min-height: 80vh;
+    }
+    
+    .hero-content {
+      margin-top: 40px;
+      max-width: 700px;
+      
+      .hero-title {
+        font-size: 2rem; // Smaller title size for mobile
+      }
+  
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+    }
+  
+    .hero-buttons {
+      flex-direction: column; // Stack buttons vertically on mobile
+      align-items: center;
+      gap: 10px;
+  
+      .btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+      }
+    }
   }
-}
+  
+
+  
+        .hero-subtitle {
+          font-size: 1.3rem;
+        }
+  
+        .hero-buttons {
+          gap: 30px;
+  
+          .btn {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+          }
+        }
+
+  
+  // Tablet styles
+  @media (max-width: 1024px) {
+    .hero-section {
+      min-height: 60vh;
+      padding: 0 40px;
+    }
+  
+    .hero-content {
+      max-width: 900px;
+  
+      .hero-title {
+        font-size: 2.2rem;
+      }
+  
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+  
+      .hero-buttons {
+        gap: 20px;
+  
+        .btn {
+          padding: 10px 25px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  
+  // Large mobile styles
+  @media (max-width: 480px) {
+    .hero-section {
+      min-height: 70vh;
+      padding: 0 20px;
+    }
+  
+    .hero-content {
+      max-width: 600px;
+  
+      .hero-title {
+        font-size: 1.8rem;
+      }
+  
+      .hero-subtitle {
+        font-size: 0.9rem;
+      }
+  
+      .hero-buttons {
+        gap: 15px;
+  
+        .btn {
+          padding: 12px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
+  // Small mobile styles
+  @media (max-width: 360px) {
+    .hero-section {
+      min-height: 75vh;
+      padding: 0 15px;
+    }
+  
+    .hero-content {
+      max-width: 550px;
+  
+      .hero-title {
+        font-size: 1.5rem;
+      }
+  
+      .hero-subtitle {
+        font-size: 0.8rem;
+      }
+  
+      .hero-buttons {
+        gap: 10px;
+  
+        .btn {
+          padding: 10px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  
