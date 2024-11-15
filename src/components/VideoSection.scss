@@ -103,6 +103,16 @@
   }
 }
 
+@media (min-width: 1300px) {
+  .video-section{
+    min-height: 100vh;
+  }
+  .video-section .video-container {
+    max-width: 2000px;
+    margin-top: -10rem;
+  }
+}
+
 // Large screens (1200px and above)
 @media (min-width: 1200px) {
   .video-section .video-container {
